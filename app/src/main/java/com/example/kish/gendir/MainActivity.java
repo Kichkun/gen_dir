@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         worker.getListPayment().forEach(payment -> {
-            if ( payment.getStatus().equals("none") ){
+            if (payment.getStatus().equals("none")) {
 
             }
         });
@@ -56,13 +56,14 @@ public class MainActivity extends AppCompatActivity {
         //ad.show();
         showDialog(IDD_CONTRAG);
     }
+
     public Dialog myCustomOnClick(int id) {
 
         switch (id) {
             case IDD_CONTRAG:
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                final boolean[] mCheckedItems = { false, true, false };
-                final String[] checkCatsName = { "", "", "" };
+                final boolean[] mCheckedItems = {false, true, false};
+                final String[] checkCatsName = {"", "", ""};
                 builder = new AlertDialog.Builder(this);
                 builder.setTitle("Имена контрагентов")
                         .setCancelable(false)
@@ -110,3 +111,4 @@ public class MainActivity extends AppCompatActivity {
                 return null;
         }
     }
+}
