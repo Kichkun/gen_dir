@@ -3,6 +3,7 @@ package com.example.kish.gendir;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -56,14 +57,18 @@ public class MainActivity extends AppCompatActivity {
         //ad.show();
         showDialog(IDD_CONTRAG);
     }
+    public void onClick_showPlat(View view) {
+        Intent intent = new Intent(MainActivity.this, PayPackage.class);
+        startActivity(intent);
+    }
 
     public Dialog myCustomOnClick(int id) {
 
         switch (id) {
             case IDD_CONTRAG:
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                final boolean[] mCheckedItems = {false, true, false};
-                final String[] checkCatsName = {"", "", ""};
+                final boolean[] mCheckedItems = {false, false, false,false,false,false,false,false,false,false};
+                final String[] checkCatsName = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
                 builder = new AlertDialog.Builder(this);
                 builder.setTitle("Имена контрагентов")
                         .setCancelable(false)

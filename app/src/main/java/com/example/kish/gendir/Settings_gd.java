@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class Settings_gd extends AppCompatActivity {
+    private final int IDD_CONTRAG = 3;
     protected  MainActivity mainActivity = new MainActivity();
 
     @Override
@@ -16,7 +17,7 @@ public class Settings_gd extends AppCompatActivity {
     }
     public void onClick(View v) {
         //ad.show();
-        showDialog(3);
+        showDialog(IDD_CONTRAG);
     }
     @Override
     protected Dialog onCreateDialog(int id) {
