@@ -30,7 +30,7 @@
             android:layout_height="match_parent">
 
             <android.support.design.widget.FloatingActionButton
-                android:id="@+id/floatingActionButton5"
+                android:id="@+id/floatingActionButton5_"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
