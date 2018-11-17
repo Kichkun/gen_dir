@@ -58,6 +58,7 @@
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
+                android:onClick="onClick_showCurrent"
                 android:padding="10dp"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
@@ -99,6 +100,7 @@
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
+                android:onClick="onClick_showCurrent"
                 android:padding="10dp"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
@@ -181,6 +183,7 @@
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
+                android:onClick="onClick_showCurrent"
                 android:padding="10dp"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
@@ -222,6 +225,7 @@
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
+                android:onClick="onClick_showCurrent"
                 android:padding="10dp"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
@@ -232,48 +236,60 @@
     </TableLayout>
 
     <Button
-        android:id="@+id/acc"
+        android:id="@+id/dec2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
         android:layout_marginBottom="116dp"
         android:backgroundTint="@color/colorPrimary"
+        android:capitalize="characters"
         android:elevation="0dp"
+        android:paddingLeft="20dp"
+        android:text='"Согласовать все"'
+        android:textAppearance="@style/TextAppearance.AppCompat"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Согласовать все" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <Button
         android:id="@+id/dec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginBottom="116dp"
         android:backgroundTint="@color/colorAccent"
+        android:capitalize="characters"
         android:elevation="0dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/acc"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:text="Отклонить все" />
+        android:paddingLeft="20dp"
+        android:text='"Отклонить все"'
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/dec2"
+        android:id="@+id/dec3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:backgroundTint="@android:color/darker_gray"
+        android:layout_marginStart="144dp"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="@color/design_default_color_primary_dark"
+        android:capitalize="characters"
         android:elevation="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/acc"
-        tools:text="Завершить" />
+        android:paddingLeft="20dp"
+        android:text='"Завершить"'
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="348dp"
+        android:layout_marginEnd="332dp"
+        android:padding="10dp"
         android:text="ID"
-        android:textSize="18sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -282,21 +298,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="248dp"
-        android:text="Сумма"
-        android:textSize="18sp"
+        android:layout_marginEnd="152dp"
+        android:padding="10dp"
+        android:text="Количество платежек"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/id4"
+        android:id="@+id/id2"
         android:layout_width="wrap_content"
-        android:layout_height="23dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="35dp"
-        android:text="Количество платежек"
-        android:textSize="18sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="76dp"
+        android:padding="10dp"
+        android:text="Сумма"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tableLayout" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

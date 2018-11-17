@@ -38,6 +38,10 @@ public class CsvWorker implements Worker {
         return payments;
     }
 
+    public void drop(Payment payment) {
+        this.payments.remove(payment);
+    }
+
     public void savePayment(InputStream is){
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));

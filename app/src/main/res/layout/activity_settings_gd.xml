@@ -34,6 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5pt"
                 android:clickable="true"
+                android:onClick="onClick"
                 app:backgroundTint="@color/colorPrimary"
                 app:srcCompat="@android:drawable/ic_menu_add" />
 
@@ -256,9 +257,11 @@
                 android:layout_height="wrap_content"
                 android:text="Максимальная сумма" />
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <ProgressBar
                 android:id="@+id/progressBar"
                 style="?android:attr/progressBarStyleHorizontal"
@@ -284,9 +287,11 @@
         android:id="@+id/floatingActionButton11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="476dp"
+        android:layout_marginEnd="51dp"
         android:clickable="true"
         app:backgroundTint="@color/design_default_color_primary_dark"
-        app:srcCompat="@android:drawable/checkbox_on_background"
-        tools:layout_editor_absoluteX="293dp"
-        tools:layout_editor_absoluteY="476dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/checkbox_on_background" />
 </android.support.constraint.ConstraintLayout>

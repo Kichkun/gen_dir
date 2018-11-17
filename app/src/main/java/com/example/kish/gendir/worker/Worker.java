@@ -7,4 +7,8 @@ import java.util.List;
 public interface Worker {
 
     List<Payment> getListPayment();
+
+    void drop(Payment payment);
+
+
 }
