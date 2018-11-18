@@ -1,6 +1,7 @@
 package com.example.kish.gendir;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,10 @@ public class Settings_gd extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_gd);
+    }
+    public void onClick_showPackage(View view) {
+        Intent intent = new Intent(Settings_gd.this, MainActivity.class);
+        startActivity(intent);
     }
     public void onClick(View v) {
         //ad.show();

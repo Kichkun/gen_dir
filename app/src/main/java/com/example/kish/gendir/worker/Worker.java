@@ -10,5 +10,7 @@ public interface Worker {
 
     void drop(Payment payment);
 
+    void deny(Payment payment);
+
 
 }

@@ -42,6 +42,12 @@ public class CsvWorker implements Worker {
         this.payments.remove(payment);
     }
 
+    @Override
+    public void deny(Payment payment) {
+        this.payments.remove(payment);
+
+    }
+
     public void savePayment(InputStream is){
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
