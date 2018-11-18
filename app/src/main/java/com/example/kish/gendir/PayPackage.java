@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.kish.gendir.worker.CsvWorker;
 import com.example.kish.gendir.worker.Worker;
+import com.example.kish.gendir.worker.WorkerFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,11 +27,7 @@ public class PayPackage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pay_package);
-        worker = new CsvWorker(getResources().openRawResource(R.raw.banks),
-                getResources().openRawResource(R.raw.payers),
-                getResources().openRawResource(R.raw.recipients),
-                getResources().openRawResource(R.raw.bills)
-        );
+        worker = WorkerFactory.getWorker();
         initTable();
 
 

@@ -17,13 +17,14 @@ import android.widget.TextView;
 
 import com.example.kish.gendir.worker.CsvWorker;
 import com.example.kish.gendir.worker.Worker;
+import com.example.kish.gendir.worker.WorkerFactory;
 
 public class MainActivity extends AppCompatActivity {
     private final String url = "";
     private com.example.kish.gendir.model.Payment payments []= new com.example.kish.gendir.model.Payment[4];
 
-    Worker worker = null;
-    Context context;
+    private Worker worker = null;
+    private Context context;
 
     // идентификатор диалогового окна AlertDialog с кнопками
 
@@ -32,11 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        worker = new CsvWorker(getResources().openRawResource(R.raw.banks),
-                getResources().openRawResource(R.raw.payers),
-                getResources().openRawResource(R.raw.recipients),
-                getResources().openRawResource(R.raw.bills)
-        );
+        worker = WorkerFactory.getWorker();
 
 
         EditText[]arrEditText = new EditText[4];
@@ -113,13 +110,6 @@ public class MainActivity extends AppCompatActivity {
             arrEditText[i].setText(payment.getId() + "." + payment.getName());
             worker.deny(payment);
         }
-        for (int i = 0; i < arrEditText.length; i++) {
-            com.example.kish.gendir.model.Payment payment = worker.getListPayment().get(0);
-            payments[i] = payment;
-            arrEditText[i].setText(payment.getId() + "." + payment.getName());
-            worker.drop(payment);
-        }
-
     }
 
 

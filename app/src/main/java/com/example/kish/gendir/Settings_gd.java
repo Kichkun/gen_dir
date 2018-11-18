@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.kish.gendir.model.ContrAgent;
 import com.example.kish.gendir.worker.CsvWorker;
 import com.example.kish.gendir.worker.Worker;
+import com.example.kish.gendir.worker.WorkerFactory;
 
 import java.util.HashMap;
 import java.util.List;
@@ -58,11 +59,7 @@ public class Settings_gd extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_gd);
-        worker = new CsvWorker(getResources().openRawResource(R.raw.banks),
-                getResources().openRawResource(R.raw.payers),
-                getResources().openRawResource(R.raw.recipients),
-                getResources().openRawResource(R.raw.bills)
-        );
+        worker = WorkerFactory.getWorker();
 
         for(Map.Entry<String, Object>entry:dictionary.entrySet()){
             final CheckBox checkBox = findViewById((Integer) entry.getValue());
