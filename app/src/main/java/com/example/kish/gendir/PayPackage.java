@@ -40,7 +40,10 @@ public class PayPackage extends AppCompatActivity {
         startActivity(intent);
     }
 
+
     public void initTable(){
+
+        TextView header = findViewById(R.id.id3);
         tableRow[0] = findViewById(R.id.a1);
         tableRow[1] = findViewById(R.id.a2);
         tableRow[2] = findViewById(R.id.a3);
@@ -48,34 +51,46 @@ public class PayPackage extends AppCompatActivity {
         tableRow[4] = findViewById(R.id.a5);
 
         List<Map<String, Object>>table = worker.toTable();
+        table = filerData(table, Settings_gd.permissions);
+        String result = "";
+        for(Map.Entry<String,Object>entry:table.get(0).entrySet()){
+            result += entry.getKey() + "|";
+        }
+        header.setText(result);
 
         for (int i = 0; i < tableRow.length; i++) {
+
+
+
             TextView textView = new TextView(this);
-            textView.setText(table.get(i).toString());
+            result = "|";
+
+            for(Map.Entry<String, Object>entry:table.get(i).entrySet())
+                result += entry.getValue() + "|";
+            textView.setText(result);
             tableRow[i].addView(textView);
         }
     }
 
-    private List<Map<String, Object>>filerData(List<Map<String, Object>>table, Map<String, Object>dictionary){
+    private List<Map<String, Object>>filerData(List<Map<String, Object>>table, Map<String, Boolean>permissions) {
         List<Map<String, Object>> results = new ArrayList<Map<String, Object>>();
-        final CheckBox[]checkBoxes = new CheckBox[dictionary.size()];
-        int i = 0;
-        for(Map.Entry<String, Object> entry:dictionary.entrySet()){
-            checkBoxes[i] = findViewById((Integer) entry.getValue());
-            i++;
-        }
 
-
-        table.forEach(map->{
-            Map<String, Object>resultMap = new HashMap<String, Object>();
+        table.forEach(map -> {
+            Map<String, Object> resultMap = new HashMap<String, Object>();
             int j = 0;
-            for(Map.Entry<String, Object> entry:map.entrySet()){
-                if(checkBoxes[j].callOnClick())
+            for (Map.Entry<String, Object> entry : map.entrySet()) {
+                if (permissions.get(entry.getKey()))
                     resultMap.put(entry.getKey(), entry.getValue());
                 j++;
             }
             results.add(resultMap);
         });
         return results;
+    }
+
+    public void onClick_Back(View view) {
+        Intent intent = new Intent(PayPackage.this, MainActivity.class);
+        startActivity(intent);
+
     }
 }
