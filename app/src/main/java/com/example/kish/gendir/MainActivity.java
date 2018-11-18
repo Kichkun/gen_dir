@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     Context context;
 
     // идентификатор диалогового окна AlertDialog с кнопками
-    private final int IDD_CONTRAG = 10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,10 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onClick(View v) {
-        //ad.show();
-        showDialog(IDD_CONTRAG);
-    }
+
     public void onClick_showPlat(View view) {
         Intent intent = new Intent(MainActivity.this, PayPackage.class);
         startActivity(intent);
@@ -136,58 +132,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public Dialog myCustomOnClick(int id) {
 
-        switch (id) {
-            case IDD_CONTRAG:
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                final boolean[] mCheckedItems = {false, false, false,false,false,false,false,false,false,false};
-                final String[] checkCatsName = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
-                builder = new AlertDialog.Builder(this);
-                builder.setTitle("Имена контрагентов")
-                        .setCancelable(false)
-
-                        .setMultiChoiceItems(checkCatsName, mCheckedItems,
-                                new DialogInterface.OnMultiChoiceClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog,
-                                                        int which, boolean isChecked) {
-                                        mCheckedItems[which] = isChecked;
-                                    }
-                                })
-
-                        // Добавляем кнопки
-                        .setPositiveButton("Готово",
-                                new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog,
-                                                        int id) {
-                                        StringBuilder state = new StringBuilder();
-                                        for (int i = 0; i < checkCatsName.length; i++) {
-                                            state.append("" + checkCatsName[i]);
-                                            if (mCheckedItems[i])
-                                                state.append(" выбран\n");
-                                            else
-                                                state.append(" не выбран\n");
-                                        }
-                                        Toast.makeText(getApplicationContext(),
-                                                state.toString(), Toast.LENGTH_LONG)
-                                                .show();
-                                    }
-                                })
-
-                        .setNegativeButton("Отмена",
-                                new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog,
-                                                        int id) {
-                                        dialog.cancel();
-
-                                    }
-                                });
-                return builder.create();
-            default:
-                return null;
-        }
-    }
 }
