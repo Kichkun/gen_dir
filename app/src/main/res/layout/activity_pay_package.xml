@@ -14,7 +14,7 @@
         android:layout_weight="2"
         android:paddingStart="10dp"
         android:paddingLeft="10dp"
-        android:paddingTop="60dp"
+        android:paddingTop="80dp"
         android:paddingEnd="20dp"
         android:paddingRight="20dp"
         android:paddingBottom="20dp"
@@ -186,7 +186,7 @@
     </TableLayout>
 
     <Button
-        android:id="@+id/dec2"
+        android:id="@+id/acc2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -194,6 +194,7 @@
         android:backgroundTint="@color/colorPrimary"
         android:capitalize="characters"
         android:elevation="0dp"
+        android:onClick="onClick_Back"
         android:paddingLeft="20dp"
         android:text='"Согласовать все"'
         android:textAppearance="@style/TextAppearance.AppCompat"
@@ -205,11 +206,12 @@
         android:id="@+id/dec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="228dp"
+        android:layout_marginStart="196dp"
         android:layout_marginBottom="116dp"
         android:backgroundTint="@color/colorAccent"
         android:capitalize="characters"
         android:elevation="0dp"
+        android:onClick="onClick_Back"
         android:paddingLeft="20dp"
         android:text='"Отклонить все"'
         android:textAppearance="@style/TextAppearance.AppCompat"
@@ -218,16 +220,27 @@
 
     <TextView
         android:id="@+id/id3"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="76dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="116dp"
         android:padding="10dp"
         android:text="ID Количество платежек Сумма"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Общая сумма: 1578960р. Количество документов: 22"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/id3"
+        app:layout_constraintEnd_toEndOf="@+id/tableLayout" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton14"

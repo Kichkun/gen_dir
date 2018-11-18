@@ -84,12 +84,12 @@ public class Settings_gd extends AppCompatActivity {
     }
 
     public String[]getUniqContAgent(List<com.example.kish.gendir.model.Payment>payments){
-        Map<ContrAgent, Integer> dictionary = new HashMap<>();
+        Map<String, Integer> dictionary = new HashMap<>();
         payments.forEach(payment -> {
             if(dictionary.containsKey(payment.getContrAgent()))
-                dictionary.put(payment.getContrAgent(), dictionary.get(payment.getContrAgent()) + 1);
+                dictionary.put(payment.getContrAgent().getName(), dictionary.get(payment.getContrAgent().getName()) + 1);
             else
-                dictionary.put(payment.getContrAgent(), 1);
+                dictionary.put(payment.getContrAgent().getName(), 1);
         });
         return  dictionary.keySet().toArray(new String[dictionary.keySet().size()]);
     }
