@@ -32,7 +32,7 @@
             <TableRow
                 android:id="@+id/a1"
                 android:layout_width="120pt"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/floatingActionButton5"
@@ -63,8 +63,8 @@
 
             <TableRow
                 android:id="@+id/a2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_width="120pt"
+                android:layout_height="wrap_content" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/floatingActionButton6"
@@ -95,8 +95,8 @@
 
             <TableRow
                 android:id="@+id/a3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_width="120pt"
+                android:layout_height="wrap_content" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/floatingActionButton7"
@@ -126,8 +126,8 @@
 
             <TableRow
                 android:id="@+id/a4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_width="120pt"
+                android:layout_height="wrap_content" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/floatingActionButton8"
@@ -158,8 +158,8 @@
 
             <TableRow
                 android:id="@+id/a5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_width="120pt"
+                android:layout_height="wrap_content" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/b8"
