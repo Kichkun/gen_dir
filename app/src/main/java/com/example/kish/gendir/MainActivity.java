@@ -73,9 +73,9 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     for(int j = offst; j < payments.length - 1; j++){
                         payments[j] = payments[j + 1];
-                        arrEditText[j].setText(payments[j].getId() + ";" + payments[j].getName());
+                        arrEditText[j].setText(payments[j].getId() + ". " + payments[j].getName());
                     }
-                    arrEditText[arrEditText.length - 1].setText(payment.getId() + ";" + payment.getName());
+                    arrEditText[arrEditText.length - 1].setText(payment.getId() + ". " + payment.getName());
 
                     payments[arrEditText.length - 1] = payment;
                     worker.drop(payment);
@@ -98,9 +98,9 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     for(int j = offst; j < payments.length - 1; j++){
                         payments[j] = payments[j + 1];
-                        arrEditText[j].setText(payments[j].getId() + ";" + payments[j].getName());
+                        arrEditText[j].setText(payments[j].getId() + ". " + payments[j].getName());
                     }
-                    arrEditText[arrEditText.length - 1].setText(payment.getId() + ";" + payment.getName());
+                    arrEditText[arrEditText.length - 1].setText(payment.getId() + ". " + payment.getName());
 
                     payments[arrEditText.length - 1] = payment;
                     worker.deny(payment);
@@ -111,13 +111,13 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < arrEditText.length; i++) {
             com.example.kish.gendir.model.Payment payment = worker.getListPayment().get(0);
             payments[i] = payment;
-            arrEditText[i].setText(payment.getId() + ";" + payment.getName());
+            arrEditText[i].setText(payment.getId() + "." + payment.getName());
             worker.deny(payment);
         }
         for (int i = 0; i < arrEditText.length; i++) {
             com.example.kish.gendir.model.Payment payment = worker.getListPayment().get(0);
             payments[i] = payment;
-            arrEditText[i].setText(payment.getId() + ";" + payment.getName());
+            arrEditText[i].setText(payment.getId() + "." + payment.getName());
             worker.drop(payment);
         }
 
