@@ -4,26 +4,24 @@ import com.example.kish.gendir.model.Bank;
 import com.example.kish.gendir.model.ContrAgent;
 import com.example.kish.gendir.model.Customer;
 import com.example.kish.gendir.model.Payment;
-import com.opencsv.CSVReader;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class CsvWorker implements Worker {
     private ClassLoader classloader = Thread.currentThread().getContextClassLoader();
     private List<Customer>customers = new ArrayList<Customer>();
     private List<Bank> banks = new ArrayList<Bank>();
     private List<ContrAgent>contrAgents = new ArrayList<ContrAgent>();
-    private List<Payment>payments = new ArrayList<Payment>();
+    private static List<Payment>payments = new ArrayList<Payment>();
 
     public CsvWorker(InputStream bankIS, InputStream contAGIS, InputStream customerIS, InputStream payment){
         saveBank(bankIS);
@@ -42,7 +40,29 @@ public class CsvWorker implements Worker {
         this.payments.remove(payment);
     }
 
+    @Override
+    public List<Map<String, Object>> toTable() {
+        List<Map<String, Object>>results = new ArrayList<Map<String, Object>>();
+        this.getListPayment().forEach(payment -> {
+            Map<String, Object>map = new HashMap<String, Object>();
+            map.put("Name", payment.getName());
+            map.put("Date", payment.getDate().toString());
+            map.put("Name_ContAgent", payment.getContrAgent().getName());
+            map.put("Id_ContAgent", payment.getContrAgent().getId());
+            map.put("Name_Customer", payment.getCustomer().getName());
+            map.put("Id_Customer", payment.getCustomer().getId());
+            map.put("Id_Bank", payment.getBank().getId());
+            map.put("Type", payment.getOperationType());
+            map.put("Summ", payment.getSumm());
+            map.put("Status", payment.getStatus());
+            results.add(map);
+        });
+        return results;
+    }
+
     public void savePayment(InputStream is){
+        if(payments.size() != 0)
+            return;
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 
