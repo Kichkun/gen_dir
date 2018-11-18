@@ -16,4 +16,8 @@ public class PayPackage extends AppCompatActivity {
         Intent intent = new Intent(PayPackage.this, Payment.class);
         startActivity(intent);
     }
+    public void onClick_Back(View view) {
+        Intent intent = new Intent(PayPackage.this, MainActivity.class);
+        startActivity(intent);
+    }
 }
