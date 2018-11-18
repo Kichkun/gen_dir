@@ -36,32 +36,22 @@
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/floatingActionButton5"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
-                android:padding="10dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
                 app:backgroundTint="@color/colorPrimary"
-                app:srcCompat="?android:attr/textCheckMarkInverse" />
+                app:srcCompat="@android:drawable/checkbox_on_background" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/floatingActionButton9"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
                 android:onClick="onClick_showCurrent"
-                android:padding="10dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
                 app:backgroundTint="@android:color/holo_orange_light"
                 app:srcCompat="@android:drawable/ic_dialog_info" />
 
@@ -78,32 +68,22 @@
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/floatingActionButton6"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
-                android:padding="10dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
                 app:backgroundTint="@color/colorPrimary"
-                app:srcCompat="?android:attr/textCheckMarkInverse" />
+                app:srcCompat="@android:drawable/checkbox_on_background" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/floatingActionButton10"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
                 android:onClick="onClick_showCurrent"
-                android:padding="10dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
                 app:backgroundTint="@android:color/holo_orange_light"
                 app:srcCompat="@android:drawable/ic_dialog_info" />
 
@@ -120,31 +100,21 @@
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/floatingActionButton7"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
-                android:padding="10dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
                 app:backgroundTint="@color/colorPrimary"
-                app:srcCompat="?android:attr/textCheckMarkInverse" />
+                app:srcCompat="@android:drawable/checkbox_on_background" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/floatingActionButton12"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
-                android:padding="10dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
                 app:backgroundTint="@android:color/holo_orange_light"
                 app:srcCompat="@android:drawable/ic_dialog_info" />
 
@@ -161,32 +131,22 @@
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/floatingActionButton8"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
-                android:padding="10dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
                 app:backgroundTint="@color/colorPrimary"
-                app:srcCompat="?android:attr/textCheckMarkInverse" />
+                app:srcCompat="@android:drawable/checkbox_on_background" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/floatingActionButton13"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
                 android:onClick="onClick_showCurrent"
-                android:padding="10dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
                 app:backgroundTint="@android:color/holo_orange_light"
                 app:srcCompat="@android:drawable/ic_dialog_info" />
 
@@ -203,32 +163,22 @@
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/b8"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
-                android:padding="10dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
                 app:backgroundTint="@color/colorPrimary"
-                app:srcCompat="?android:attr/textCheckMarkInverse" />
+                app:srcCompat="@android:drawable/checkbox_on_background" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/b9"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
                 android:onClick="onClick_showCurrent"
-                android:padding="10dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
                 app:backgroundTint="@android:color/holo_orange_light"
                 app:srcCompat="@android:drawable/ic_dialog_info" />
 
@@ -266,55 +216,29 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/dec3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginBottom="44dp"
-        android:backgroundTint="@color/design_default_color_primary_dark"
-        android:capitalize="characters"
-        android:elevation="0dp"
-        android:paddingLeft="20dp"
-        android:text='"Завершить"'
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="332dp"
-        android:padding="10dp"
-        android:text="ID"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/id3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="152dp"
+        android:layout_marginEnd="76dp"
         android:padding="10dp"
-        android:text="Количество платежек"
+        android:text="ID Количество платежек Сумма"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/id2"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="76dp"
-        android:padding="10dp"
-        android:text="Сумма"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginTop="452dp"
+        android:layout_marginEnd="36dp"
+        android:clickable="true"
+        app:backgroundTint="@color/design_default_color_primary_dark"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/checkbox_on_background" />
 
 </android.support.constraint.ConstraintLayout>

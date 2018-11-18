@@ -12,7 +12,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -60,9 +60,13 @@ public class CsvWorker implements Worker {
         return results;
     }
 
+    @Override
+    public void deny(Payment payment) {
+        this.payments.remove(payment);
+
+    }
+
     public void savePayment(InputStream is){
-        if(payments.size() != 0)
-            return;
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 

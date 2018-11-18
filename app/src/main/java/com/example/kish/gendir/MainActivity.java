@@ -48,10 +48,15 @@ public class MainActivity extends AppCompatActivity {
 
         FloatingActionButton buttonsOk[] = new FloatingActionButton[4];
         buttonsOk[0] = findViewById(R.id.floatingActionButton5_);
-
         buttonsOk[1] = findViewById(R.id.floatingActionButton6);
         buttonsOk[2] = findViewById(R.id.floatingActionButton7);
         buttonsOk[3] = findViewById(R.id.floatingActionButton8);
+
+        FloatingActionButton buttonsNo[] = new FloatingActionButton[4];
+        buttonsNo[0] = findViewById(R.id.floatingActionButton19);
+        buttonsNo[1] = findViewById(R.id.floatingActionButton20);
+        buttonsNo[2] = findViewById(R.id.floatingActionButton21);
+        buttonsNo[3] = findViewById(R.id.floatingActionButton22);
 
         for(int i = 0; i < buttonsOk.length; i++){
             final int offst = i;
@@ -68,9 +73,9 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     for(int j = offst; j < payments.length - 1; j++){
                         payments[j] = payments[j + 1];
-                        arrEditText[j].setText(payments[j].getId() + ";" + payments[j].getName());
+                        arrEditText[j].setText(payments[j].getId() + ". " + payments[j].getName());
                     }
-                    arrEditText[arrEditText.length - 1].setText(payment.getId() + ";" + payment.getName());
+                    arrEditText[arrEditText.length - 1].setText(payment.getId() + ". " + payment.getName());
 
                     payments[arrEditText.length - 1] = payment;
                     worker.drop(payment);
@@ -78,11 +83,41 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+        for(int i = 0; i < buttonsNo.length; i++){
+            final int offst = i;
+            buttonsNo[offst].setOnClickListener((v) -> {
+                com.example.kish.gendir.model.Payment payment = null;
+                worker.deny(payments[offst]);
+                while (worker.getListPayment().iterator().hasNext() && !worker.getListPayment().get(0).getStatus().equals("None"))
+                    worker.deny(worker.getListPayment().get(0));
+                payment = worker.getListPayment().get(0);
+                if ( payment == null) {
+                    arrEditText[offst].setText("");
+                    payments[offst] = null;
+                }
+                else {
+                    for(int j = offst; j < payments.length - 1; j++){
+                        payments[j] = payments[j + 1];
+                        arrEditText[j].setText(payments[j].getId() + ". " + payments[j].getName());
+                    }
+                    arrEditText[arrEditText.length - 1].setText(payment.getId() + ". " + payment.getName());
 
+                    payments[arrEditText.length - 1] = payment;
+                    worker.deny(payment);
+
+                }
+            });
+        }
         for (int i = 0; i < arrEditText.length; i++) {
             com.example.kish.gendir.model.Payment payment = worker.getListPayment().get(0);
             payments[i] = payment;
-            arrEditText[i].setText(payment.getId() + ";" + payment.getName());
+            arrEditText[i].setText(payment.getId() + "." + payment.getName());
+            worker.deny(payment);
+        }
+        for (int i = 0; i < arrEditText.length; i++) {
+            com.example.kish.gendir.model.Payment payment = worker.getListPayment().get(0);
+            payments[i] = payment;
+            arrEditText[i].setText(payment.getId() + "." + payment.getName());
             worker.drop(payment);
         }
 
@@ -94,6 +129,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClick_showPlat(View view) {
         Intent intent = new Intent(MainActivity.this, PayPackage.class);
+        startActivity(intent);
+    }
+    public void onClick_showSettings(View view) {
+        Intent intent = new Intent(MainActivity.this, Settings_gd.class);
         startActivity(intent);
     }
 

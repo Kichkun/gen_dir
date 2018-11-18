@@ -13,5 +13,7 @@ public interface Worker {
 
     List<Map<String, Object>>toTable();
 
+    void deny(Payment payment);
+
 
 }
